@@ -1,0 +1,258 @@
+[2023-10-03 15:55:49] This is codeql database analyze /home/junseok/workdir/codeql-database --format=csv --threads 4 --output=/home/junseok/workdir/cpp-ql-cwe-22-output /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql --verbosity=errors
+[2023-10-03 15:55:49] Log file was started late.
+[2023-10-03 15:55:49] [PROGRESS] database analyze> Running queries.
+[2023-10-03 15:55:49] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --threads=4 --warnings=show --qlconfig-file=/home/junseok/workdir/qlconfig.yml --no-rerun -- /home/junseok/workdir/codeql-database /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:55:49] Calling plumbing command: codeql resolve ram --format=json
+[2023-10-03 15:55:49] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx12583M",
+                        "--off-heap-ram=18105"
+                      ]
+[2023-10-03 15:55:49] Spawning plumbing command: execute queries -J-Xmx12583M --off-heap-ram=18105 --verbosity=errors --logdir=/home/junseok/workdir/codeql-database/log --evaluator-log-level=5 --threads=4 --warnings=show --qlconfig-file=/home/junseok/workdir/qlconfig.yml --no-rerun --output=/home/junseok/workdir/codeql-database/results -- /home/junseok/workdir/codeql-database/db-cpp /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:56:06] Plumbing command codeql execute queries terminated with status 0.
+[2023-10-03 15:56:06] Plumbing command codeql database run-queries completed with status 0.
+[2023-10-03 15:56:06] [PROGRESS] database analyze> Interpreting results.
+[2023-10-03 15:56:06] Running plumbing command: codeql database interpret-results --format=csv -o=/home/junseok/workdir/cpp-ql-cwe-22-output --max-paths=4 --csv-location-format=line-column --print-diagnostics-summary --print-metrics-summary --threads=4 --qlconfig-file=/home/junseok/workdir/qlconfig.yml -- /home/junseok/workdir/codeql-database /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:56:06] Calling plumbing command: codeql resolve queries --qlconfig-file=/home/junseok/workdir/qlconfig.yml --format=json -- /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:56:06] [PROGRESS] resolve queries> Recording pack reference codeql/cpp-queries at /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src.
+[2023-10-03 15:56:06] Plumbing command codeql resolve queries completed:
+                      [
+                        "/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql"
+                      ]
+[2023-10-03 15:56:06] Calling plumbing command: codeql resolve extensions --qlconfig-file=/home/junseok/workdir/qlconfig.yml /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:56:06] Calling plumbing command: codeql resolve queries --qlconfig-file=/home/junseok/workdir/qlconfig.yml --allow-library-packs --format startingpacks -- /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:56:06] [PROGRESS] resolve queries> Recording pack reference codeql/cpp-queries at /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src.
+[2023-10-03 15:56:06] Plumbing command codeql resolve queries completed:
+                      [
+                        "/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src"
+                      ]
+[2023-10-03 15:56:06] Calling plumbing command: codeql resolve extensions-by-pack --qlconfig-file=/home/junseok/workdir/qlconfig.yml -- /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-queries: not <empty> [0.7.4-dev] {root: codeql/cpp-queries@0.7.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/cpp-queries: <empty> [0.7.4-dev] {codeql/cpp-queries: not <empty> [0.7.4-dev] {root: codeql/cpp-queries@0.7.4-dev}}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-queries: * [*], codeql/cpp-all: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/cpp-all@0.9.2-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/suite-helpers@0.6.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-queries: * [*], codeql/util: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DECISION 1] codeql/cpp-queries: 0.7.4-dev
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/util: * [*] {codeql/cpp-queries: * [*], codeql/util: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/util@0.1.4-dev}}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/suite-helpers: * [*] {codeql/cpp-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/suite-helpers@0.6.4-dev}}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/cpp-all: * [*] {codeql/cpp-queries: * [*], codeql/cpp-all: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/cpp-all@0.9.2-dev}}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/dataflow@0.0.3-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/ssa: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/ssa@0.1.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/tutorial@0.1.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/util: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DECISION 2] codeql/cpp-all: 0.9.2-dev
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/tutorial: * [*] {codeql/cpp-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/tutorial@0.1.4-dev}}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/ssa: * [*] {codeql/cpp-all: * [*], codeql/ssa: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/ssa@0.1.4-dev}}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/dataflow: * [*] {codeql/cpp-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/dataflow@0.0.3-dev}}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.1.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.1.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DECISION 3] codeql/dataflow: 0.0.3-dev
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/typetracking: * [*] {codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.1.4-dev}}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DECISION 4] codeql/ssa: 0.1.4-dev
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DECISION 5] codeql/suite-helpers: 0.6.4-dev
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DECISION 6] codeql/tutorial: 0.1.4-dev
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DECISION 7] codeql/typetracking: 0.1.4-dev
+[2023-10-03 15:56:06] [SPAMMY] resolve extensions-by-pack> [DECISION 8] codeql/util: 0.1.4-dev
+[2023-10-03 15:56:06] Plumbing command codeql resolve extensions-by-pack completed:
+                      {
+                        "models" : [ ],
+                        "data" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2023-10-03 15:56:06] Plumbing command codeql resolve extensions completed:
+                      {
+                        "models" : [ ],
+                        "data" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2023-10-03 15:56:06] [PROGRESS] database interpret-results> Interpreting /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql...
+[2023-10-03 15:56:06] Calling plumbing command: codeql resolve library-path --query=/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql --full-library-path=none --dbscheme=none --format=json
+[2023-10-03 15:56:06] [DETAILS] resolve library-path> Resolving query at normalized path /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql.
+[2023-10-03 15:56:06] [DETAILS] resolve library-path> Found enclosing pack 'codeql/cpp-queries' at /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src.
+[2023-10-03 15:56:06] [DETAILS] resolve library-path> Adding compilation cache at /home/junseok/.codeql/compile-cache.
+[2023-10-03 15:56:06] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /home/junseok/workdir/none
+[2023-10-03 15:56:06] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2023-10-03 15:56:06] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/junseok/workdir/none"
+                        ],
+                        "dbscheme" : "/home/junseok/workdir/none",
+                        "compilationCache" : [
+                          "/home/junseok/.codeql/compile-cache"
+                        ],
+                        "relativeName" : "codeql/cpp-queries/Security/CWE/CWE-022/TaintedPath.ql",
+                        "qlPackName" : "codeql/cpp-queries"
+                      }
+[2023-10-03 15:56:06] [DETAILS] database interpret-results>  ... found results file at /home/junseok/workdir/codeql-database/results/codeql/cpp-queries/Security/CWE/CWE-022/TaintedPath.bqrs.
+[2023-10-03 15:56:06] [DETAILS] database interpret-results> Interpreted pathproblem query "Uncontrolled data used in path expression" (cpp/path-injection) at path /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql.
+[2023-10-03 15:56:06] [DETAILS] database interpret-results> Interpreting file baseline information.
+[2023-10-03 15:56:06] [DETAILS] database interpret-results> Interpreting diagnostic messages...
+[2023-10-03 15:56:06] [SPAMMY] database interpret-results> Looking for diagnostics in /home/junseok/workdir/codeql-database/diagnostic...
+[2023-10-03 15:56:06] [SPAMMY] database interpret-results> Looking for diagnostics in /home/junseok/workdir/codeql-database/diagnostic/extractors...
+[2023-10-03 15:56:06] [SPAMMY] database interpret-results> Looking for diagnostics in /home/junseok/workdir/codeql-database/diagnostic/extractors/cpp...
+[2023-10-03 15:56:06] [SPAMMY] database interpret-results> Looking for diagnostics in /home/junseok/workdir/codeql-database/diagnostic/tracer...
+[2023-10-03 15:56:06] [DETAILS] database interpret-results> Found 0 raw diagnostic messages.
+[2023-10-03 15:56:06] [DETAILS] database interpret-results> Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+[2023-10-03 15:56:06] [DETAILS] database interpret-results> Interpreted diagnostic messages (2ms).
+[2023-10-03 15:56:06] Calling plumbing command: codeql resolve languages --format=json
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Scanning for [codeql-extractor.yml] from /home/junseok/workdir/codeql/codeql/.codeqlmanifest.json
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/yaml/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/cpp/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/go/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/javascript/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/xml/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/ruby/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/csharp/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/csv/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/properties/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/java/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/python/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/swift/codeql-extractor.yml.
+[2023-10-03 15:56:06] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/html/codeql-extractor.yml.
+[2023-10-03 15:56:06] Plumbing command codeql resolve languages completed:
+                      {
+                        "aliases" : { },
+                        "extractors" : {
+                          "yaml" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/yaml"
+                            }
+                          ],
+                          "cpp" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/cpp"
+                            }
+                          ],
+                          "go" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/go"
+                            }
+                          ],
+                          "javascript" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/javascript",
+                              "extractor_options" : { }
+                            }
+                          ],
+                          "xml" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/xml"
+                            }
+                          ],
+                          "ruby" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/ruby",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip)$"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "csharp" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/csharp",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip|brotli)$"
+                                    }
+                                  }
+                                },
+                                "buildless" : {
+                                  "title" : "Whether to use buildless (standalone) extraction.",
+                                  "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "cil" : {
+                                  "title" : "Whether to enable CIL extraction.",
+                                  "description" : "A value indicating, whether CIL extraction should be enabled. The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "csv" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/csv"
+                            }
+                          ],
+                          "properties" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/properties"
+                            }
+                          ],
+                          "java" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/java",
+                              "extractor_options" : {
+                                "exclude" : {
+                                  "title" : "A glob excluding files from analysis.",
+                                  "description" : "A glob indicating what files to exclude from the analysis.\n",
+                                  "type" : "string"
+                                },
+                                "add_prefer_source" : {
+                                  "title" : "Whether to always prefer source files over class files.",
+                                  "description" : "A value indicating whether source files should be preferred over class files. If set to 'true', the extraction adds '-Xprefer:source' to the javac command line. If set to 'false', the extraction uses the default javac behavior ('-Xprefer:newer'). The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "python" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/python"
+                            }
+                          ],
+                          "swift" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/swift"
+                            }
+                          ],
+                          "html" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/html"
+                            }
+                          ]
+                        }
+                      }
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Loaded the following extractors: YAML, C/C++, Go, JavaScript/TypeScript, XML, Ruby, C#, CSV, Java Properties Files, Java/Kotlin, Python, Swift, HTML
+[2023-10-03 15:56:06] [PROGRESS] database interpret-results> Exporting results to CSV...
+[2023-10-03 15:56:06] [SPAMMY] database interpret-results> Interpreting results for path query cpp/path-injection...
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Processed graph parents (0ms).
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Processed graph nodes (0ms).
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Processed graph edges (1ms).
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Created graph (5ms).
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Initialized subpaths (1ms).
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Calculated subpath scopes (0ms).
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Executing 0 path computations, each computing up to 4 different paths.
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Processed path results (2ms).
+[2023-10-03 15:56:06] [SPAMMIER] database interpret-results> Linked relevant graph parents (0ms).
+[2023-10-03 15:56:06] [SPAMMY] database interpret-results> Interpreted results for path query cpp/path-injection (9ms).
+[2023-10-03 15:56:06] [SPAMMY] database interpret-results> Skipping non-rule analysis cpp/baseline/expected-extracted-files
+[2023-10-03 15:56:06] [PROGRESS] database interpret-results> Exported results to CSV (10ms).
+[2023-10-03 15:56:06] Plumbing command codeql database interpret-results completed.
+[2023-10-03 15:56:06] Terminating normally.

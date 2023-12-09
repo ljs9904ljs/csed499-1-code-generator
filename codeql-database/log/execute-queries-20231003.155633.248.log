@@ -1,0 +1,118 @@
+[2023-10-03 15:56:33] This is codeql execute queries -J-Xmx12583M --off-heap-ram=18105 --verbosity=progress --logdir=/home/junseok/workdir/codeql-database/log --evaluator-log-level=5 --threads=4 --warnings=show --qlconfig-file=/home/junseok/workdir/qlconfig.yml --no-rerun --output=/home/junseok/workdir/codeql-database/results -- /home/junseok/workdir/codeql-database/db-cpp /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:56:33] Calling plumbing command: codeql resolve queries --qlconfig-file=/home/junseok/workdir/qlconfig.yml --format=json -- /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:56:33] [PROGRESS] resolve queries> Recording pack reference codeql/cpp-queries at /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src.
+[2023-10-03 15:56:33] Plumbing command codeql resolve queries completed:
+                      [
+                        "/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql"
+                      ]
+[2023-10-03 15:56:33] Creating executor with 4 threads.
+[2023-10-03 15:56:33] Calling plumbing command: codeql resolve extensions --qlconfig-file=/home/junseok/workdir/qlconfig.yml /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:56:33] Calling plumbing command: codeql resolve queries --qlconfig-file=/home/junseok/workdir/qlconfig.yml --allow-library-packs --format startingpacks -- /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql
+[2023-10-03 15:56:33] [PROGRESS] resolve queries> Recording pack reference codeql/cpp-queries at /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src.
+[2023-10-03 15:56:33] Plumbing command codeql resolve queries completed:
+                      [
+                        "/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src"
+                      ]
+[2023-10-03 15:56:33] Calling plumbing command: codeql resolve extensions-by-pack --qlconfig-file=/home/junseok/workdir/qlconfig.yml -- /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-queries: not <empty> [0.7.4-dev] {root: codeql/cpp-queries@0.7.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/cpp-queries: <empty> [0.7.4-dev] {codeql/cpp-queries: not <empty> [0.7.4-dev] {root: codeql/cpp-queries@0.7.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-queries: * [*], codeql/cpp-all: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/cpp-all@0.9.2-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/suite-helpers@0.6.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-queries: * [*], codeql/util: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DECISION 1] codeql/cpp-queries: 0.7.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/util: * [*] {codeql/cpp-queries: * [*], codeql/util: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/util@0.1.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/suite-helpers: * [*] {codeql/cpp-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/suite-helpers@0.6.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/cpp-all: * [*] {codeql/cpp-queries: * [*], codeql/cpp-all: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/cpp-all@0.9.2-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/dataflow@0.0.3-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/ssa: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/ssa@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/tutorial@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/util: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DECISION 2] codeql/cpp-all: 0.9.2-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/tutorial: * [*] {codeql/cpp-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/tutorial@0.1.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/ssa: * [*] {codeql/cpp-all: * [*], codeql/ssa: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/ssa@0.1.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/dataflow: * [*] {codeql/cpp-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/dataflow@0.0.3-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DECISION 3] codeql/dataflow: 0.0.3-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/typetracking: * [*] {codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.1.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DECISION 4] codeql/ssa: 0.1.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DECISION 5] codeql/suite-helpers: 0.6.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DECISION 6] codeql/tutorial: 0.1.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DECISION 7] codeql/typetracking: 0.1.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve extensions-by-pack> [DECISION 8] codeql/util: 0.1.4-dev
+[2023-10-03 15:56:33] Plumbing command codeql resolve extensions-by-pack completed:
+                      {
+                        "models" : [ ],
+                        "data" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2023-10-03 15:56:33] Plumbing command codeql resolve extensions completed:
+                      {
+                        "models" : [ ],
+                        "data" : { },
+                        "extensionPacks" : [ ]
+                      }
+[2023-10-03 15:56:33] [DETAILS] execute queries> Did not find any ML models.
+[2023-10-03 15:56:33] Calling plumbing command: codeql resolve library-path --qlconfig-file=/home/junseok/workdir/qlconfig.yml --query=/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql --format=json
+[2023-10-03 15:56:33] [DETAILS] resolve library-path> Resolving query at normalized path /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql.
+[2023-10-03 15:56:33] [DETAILS] resolve library-path> Found enclosing pack 'codeql/cpp-queries' at /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src.
+[2023-10-03 15:56:33] [DETAILS] resolve library-path> Adding compilation cache at /home/junseok/.codeql/compile-cache.
+[2023-10-03 15:56:33] [DETAILS] resolve library-path> Resolving library dependencies from /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/qlpack.yml.
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/cpp-queries: not <empty> [0.7.4-dev] {root: codeql/cpp-queries@0.7.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DERIVATION] codeql/cpp-queries: <empty> [0.7.4-dev] {codeql/cpp-queries: not <empty> [0.7.4-dev] {root: codeql/cpp-queries@0.7.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/cpp-queries: * [*], codeql/cpp-all: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/cpp-all@0.9.2-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/cpp-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/suite-helpers@0.6.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/cpp-queries: * [*], codeql/util: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DECISION 1] codeql/cpp-queries: 0.7.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DERIVATION] codeql/util: * [*] {codeql/cpp-queries: * [*], codeql/util: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/util@0.1.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DERIVATION] codeql/suite-helpers: * [*] {codeql/cpp-queries: * [*], codeql/suite-helpers: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/suite-helpers@0.6.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DERIVATION] codeql/cpp-all: * [*] {codeql/cpp-queries: * [*], codeql/cpp-all: not * [*] {dependency: codeql/cpp-queries@* [*] requires codeql/cpp-all@0.9.2-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/dataflow@0.0.3-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/ssa: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/ssa@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/tutorial@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/cpp-all: * [*], codeql/util: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DECISION 2] codeql/cpp-all: 0.9.2-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DERIVATION] codeql/tutorial: * [*] {codeql/cpp-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/tutorial@0.1.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DERIVATION] codeql/ssa: * [*] {codeql/cpp-all: * [*], codeql/ssa: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/ssa@0.1.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DERIVATION] codeql/dataflow: * [*] {codeql/cpp-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/cpp-all@* [*] requires codeql/dataflow@0.0.3-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DECISION 3] codeql/dataflow: 0.0.3-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DERIVATION] codeql/typetracking: * [*] {codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@0.1.4-dev}}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DECISION 4] codeql/ssa: 0.1.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DECISION 5] codeql/suite-helpers: 0.6.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DECISION 6] codeql/tutorial: 0.1.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@0.1.4-dev}
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DECISION 7] codeql/typetracking: 0.1.4-dev
+[2023-10-03 15:56:33] [SPAMMY] resolve library-path> [DECISION 8] codeql/util: 0.1.4-dev
+[2023-10-03 15:56:33] [DETAILS] resolve library-path> QL pack dependencies for /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src resolved OK.
+[2023-10-03 15:56:33] [DETAILS] resolve library-path> Found dbscheme through QL packs: /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/lib/semmlecode.cpp.dbscheme.
+[2023-10-03 15:56:33] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src",
+                          "/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/lib",
+                          "/home/junseok/workdir/codeql/codeql-main-clone/shared/dataflow",
+                          "/home/junseok/workdir/codeql/codeql-main-clone/shared/ssa",
+                          "/home/junseok/workdir/codeql/codeql-main-clone/misc/suite-helpers",
+                          "/home/junseok/workdir/codeql/codeql-main-clone/shared/tutorial",
+                          "/home/junseok/workdir/codeql/codeql-main-clone/shared/typetracking",
+                          "/home/junseok/workdir/codeql/codeql-main-clone/shared/util"
+                        ],
+                        "dbscheme" : "/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/lib/semmlecode.cpp.dbscheme",
+                        "compilationCache" : [
+                          "/home/junseok/.codeql/compile-cache"
+                        ],
+                        "relativeName" : "codeql/cpp-queries/Security/CWE/CWE-022/TaintedPath.ql",
+                        "qlPackName" : "codeql/cpp-queries"
+                      }
+[2023-10-03 15:56:33] [PROGRESS] execute queries> [1/1] No need to rerun /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022/TaintedPath.ql.
+[2023-10-03 15:56:33] [PROGRESS] execute queries> Shutting down query evaluator.
+[2023-10-03 15:56:33] Sequence stamp origin is -6268263419021136557
+[2023-10-03 15:56:33] Pausing evaluation to close the cache at sequence stamp o+0
+[2023-10-03 15:56:33] The disk cache is freshly trimmed; leave it be.
+[2023-10-03 15:56:33] Unpausing evaluation
+[2023-10-03 15:56:33] Terminating normally.

@@ -1,0 +1,320 @@
+[2023-10-03 15:55:03] This is codeql database create --language=cpp --command=make --source-root=/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022 --overwrite /home/junseok/workdir/codeql-database --verbosity=errors
+[2023-10-03 15:55:03] Log file was started late.
+[2023-10-03 15:55:03] [PROGRESS] database create> Initializing database at /home/junseok/workdir/codeql-database.
+[2023-10-03 15:55:03] Running plumbing command: codeql database init --overwrite --language=cpp --extractor-options-verbosity=1 --qlconfig-file=/home/junseok/workdir/qlconfig.yml --source-root=/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022 --allow-missing-source-root=false --allow-already-existing -- /home/junseok/workdir/codeql-database
+[2023-10-03 15:55:03] Calling plumbing command: codeql resolve languages --extractor-options-verbosity=1 --format=betterjson
+[2023-10-03 15:55:03] [DETAILS] resolve languages> Scanning for [codeql-extractor.yml] from /home/junseok/workdir/codeql/codeql/.codeqlmanifest.json
+[2023-10-03 15:55:03] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/yaml/codeql-extractor.yml.
+[2023-10-03 15:55:03] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/cpp/codeql-extractor.yml.
+[2023-10-03 15:55:03] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/go/codeql-extractor.yml.
+[2023-10-03 15:55:03] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/javascript/codeql-extractor.yml.
+[2023-10-03 15:55:03] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/xml/codeql-extractor.yml.
+[2023-10-03 15:55:03] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/ruby/codeql-extractor.yml.
+[2023-10-03 15:55:03] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/csharp/codeql-extractor.yml.
+[2023-10-03 15:55:04] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/csv/codeql-extractor.yml.
+[2023-10-03 15:55:04] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/properties/codeql-extractor.yml.
+[2023-10-03 15:55:04] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/java/codeql-extractor.yml.
+[2023-10-03 15:55:04] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/python/codeql-extractor.yml.
+[2023-10-03 15:55:04] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/swift/codeql-extractor.yml.
+[2023-10-03 15:55:04] [DETAILS] resolve languages> Parsing /home/junseok/workdir/codeql/codeql/html/codeql-extractor.yml.
+[2023-10-03 15:55:04] Plumbing command codeql resolve languages completed:
+                      {
+                        "aliases" : { },
+                        "extractors" : {
+                          "yaml" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/yaml"
+                            }
+                          ],
+                          "cpp" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/cpp"
+                            }
+                          ],
+                          "go" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/go"
+                            }
+                          ],
+                          "javascript" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/javascript",
+                              "extractor_options" : { }
+                            }
+                          ],
+                          "xml" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/xml"
+                            }
+                          ],
+                          "ruby" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/ruby",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip)$"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "csharp" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/csharp",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip|brotli)$"
+                                    }
+                                  }
+                                },
+                                "buildless" : {
+                                  "title" : "Whether to use buildless (standalone) extraction.",
+                                  "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "cil" : {
+                                  "title" : "Whether to enable CIL extraction.",
+                                  "description" : "A value indicating, whether CIL extraction should be enabled. The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "csv" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/csv"
+                            }
+                          ],
+                          "properties" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/properties"
+                            }
+                          ],
+                          "java" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/java",
+                              "extractor_options" : {
+                                "exclude" : {
+                                  "title" : "A glob excluding files from analysis.",
+                                  "description" : "A glob indicating what files to exclude from the analysis.\n",
+                                  "type" : "string"
+                                },
+                                "add_prefer_source" : {
+                                  "title" : "Whether to always prefer source files over class files.",
+                                  "description" : "A value indicating whether source files should be preferred over class files. If set to 'true', the extraction adds '-Xprefer:source' to the javac command line. If set to 'false', the extraction uses the default javac behavior ('-Xprefer:newer'). The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "python" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/python"
+                            }
+                          ],
+                          "swift" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/swift"
+                            }
+                          ],
+                          "html" : [
+                            {
+                              "extractor_root" : "/home/junseok/workdir/codeql/codeql/html"
+                            }
+                          ]
+                        }
+                      }
+[2023-10-03 15:55:04] [PROGRESS] database init> Calculating baseline information in /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022
+[2023-10-03 15:55:04] [SPAMMY] database init> Ignoring the following directories when processing baseline information: .git, .hg, .svn.
+[2023-10-03 15:55:04] [DETAILS] database init> Running command in /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022: /home/junseok/workdir/codeql/codeql/tools/linux64/scc --by-file --exclude-dir .git,.hg,.svn --format json --no-large --no-min .
+[2023-10-03 15:55:04] [SPAMMY] database init> Found 1 baseline files for cpp.
+[2023-10-03 15:55:04] [PROGRESS] database init> Calculated baseline information for languages: cpp (40ms).
+[2023-10-03 15:55:04] [PROGRESS] database init> Resolving extractor cpp.
+[2023-10-03 15:55:04] [DETAILS] database init> Found candidate extractor root for cpp: /home/junseok/workdir/codeql/codeql/cpp.
+[2023-10-03 15:55:04] [PROGRESS] database init> Successfully loaded extractor C/C++ (cpp) from /home/junseok/workdir/codeql/codeql/cpp.
+[2023-10-03 15:55:04] [PROGRESS] database init> Created skeleton CodeQL database at /home/junseok/workdir/codeql-database. This in-progress database is ready to be populated by an extractor.
+[2023-10-03 15:55:04] Plumbing command codeql database init completed.
+[2023-10-03 15:55:04] [PROGRESS] database create> Running build command: [make]
+[2023-10-03 15:55:04] Running plumbing command: codeql database trace-command --working-dir=/home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022 --index-traceless-dbs --no-db-cluster -- /home/junseok/workdir/codeql-database make
+[2023-10-03 15:55:04] [PROGRESS] database trace-command> Running command in /home/junseok/workdir/codeql/codeql-main-clone/cpp/ql/src/Security/CWE/CWE-022: [make]
+[2023-10-03 15:55:04] [build-stdout] gcc -Wall -c TaintedPath.c
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c: In function ‘main’:
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:5:21: error: ‘FILENAME_MAX’ undeclared (first use in this function)
+[2023-10-03 15:55:04] [build-stderr]      char fileBuffer[FILENAME_MAX] = "/home/";
+[2023-10-03 15:55:04] [build-stderr]                      ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:5:21: note: each undeclared identifier is reported only once for each function it appears in
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:7:5: error: unknown type name ‘size_t’
+[2023-10-03 15:55:04] [build-stderr]      size_t len = strlen(fileName);
+[2023-10-03 15:55:04] [build-stderr]      ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:7:5: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:7:18: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+[2023-10-03 15:55:04] [build-stderr]      size_t len = strlen(fileName);
+[2023-10-03 15:55:04] [build-stderr]                   ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:8:5: warning: implicit declaration of function ‘strncat’ [-Wimplicit-function-declaration]
+[2023-10-03 15:55:04] [build-stderr]      strncat(fileName+len, userAndFile, FILENAME_MAX-len-1);
+[2023-10-03 15:55:04] [build-stderr]      ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:8:5: warning: incompatible implicit declaration of built-in function ‘strncat’ [enabled by default]
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:10:5: warning: implicit declaration of function ‘fopen’ [-Wimplicit-function-declaration]
+[2023-10-03 15:55:04] [build-stderr]      fopen(fileName, "wb+");
+[2023-10-03 15:55:04] [build-stderr]      ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:5:10: warning: unused variable ‘fileBuffer’ [-Wunused-variable]
+[2023-10-03 15:55:04] [build-stderr]      char fileBuffer[FILENAME_MAX] = "/home/";
+[2023-10-03 15:55:04] [build-stderr]           ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:16:5: error: unknown type name ‘size_t’
+[2023-10-03 15:55:04] [build-stderr]      size_t len = strlen(fileName);
+[2023-10-03 15:55:04] [build-stderr]      ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:16:18: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+[2023-10-03 15:55:04] [build-stderr]      size_t len = strlen(fileName);
+[2023-10-03 15:55:04] [build-stderr]                   ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:19:5: warning: incompatible implicit declaration of built-in function ‘strncat’ [enabled by default]
+[2023-10-03 15:55:04] [build-stderr]      strncat(fileName+len, fixed, FILENAME_MAX-len-1);
+[2023-10-03 15:55:04] [build-stderr]      ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:14:10: warning: unused variable ‘fileBuffer’ [-Wunused-variable]
+[2023-10-03 15:55:04] [build-stderr]      char fileBuffer[FILENAME_MAX] = "/home/";
+[2023-10-03 15:55:04] [build-stderr]           ^
+[2023-10-03 15:55:04] [build-stderr] TaintedPath.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+[2023-10-03 15:55:04] [build-stderr]  }
+[2023-10-03 15:55:04] [build-stderr]  ^
+[2023-10-03 15:55:04] [build-stderr] make: [TaintedPath.o] Error 1 (ignored)
+[2023-10-03 15:55:04] Plumbing command codeql database trace-command completed.
+[2023-10-03 15:55:04] [PROGRESS] database create> Finalizing database at /home/junseok/workdir/codeql-database.
+[2023-10-03 15:55:04] Running plumbing command: codeql database finalize --mode=normal --no-db-cluster -- /home/junseok/workdir/codeql-database
+[2023-10-03 15:55:04] [PROGRESS] database finalize> Running TRAP import for CodeQL database at /home/junseok/workdir/codeql-database...
+[2023-10-03 15:55:04] Running plumbing command: codeql dataset import --dbscheme=/home/junseok/workdir/codeql/codeql/cpp/semmlecode.cpp.dbscheme -- /home/junseok/workdir/codeql-database/db-cpp /home/junseok/workdir/codeql-database/trap/cpp
+[2023-10-03 15:55:04] Clearing disk cache since the version file /home/junseok/workdir/codeql-database/db-cpp/default/cache/version does not exist
+[2023-10-03 15:55:04] Tuple pool not found. Clearing relations with cached strings
+[2023-10-03 15:55:04] Trimming disk cache at /home/junseok/workdir/codeql-database/db-cpp/default/cache in mode brutal.
+[2023-10-03 15:55:04] Sequence stamp origin is -6268263801456981511
+[2023-10-03 15:55:04] Pausing evaluation to hard-clear memory at sequence stamp o+0
+[2023-10-03 15:55:04] Unpausing evaluation
+[2023-10-03 15:55:04] Pausing evaluation to quickly trim disk at sequence stamp o+1
+[2023-10-03 15:55:04] Unpausing evaluation
+[2023-10-03 15:55:04] Pausing evaluation to zealously trim disk at sequence stamp o+2
+[2023-10-03 15:55:04] Unpausing evaluation
+[2023-10-03 15:55:04] Trimming completed (6ms): Purged everything.
+[2023-10-03 15:55:04] Scanning for files in /home/junseok/workdir/codeql-database/trap/cpp
+[2023-10-03 15:55:04] Importing cpp_predefined.acb19af8.trap (TaintedPath.c.11a34225_0.trap.tar.br) (1 of 4)
+[2023-10-03 15:55:04] Importing TaintedPath.c.11a34225.trap (TaintedPath.c.11a34225_0.trap.tar.br) (2 of 4)
+[2023-10-03 15:55:04] Importing 41083469_0.trap.br (3 of 4)
+[2023-10-03 15:55:04] Importing sourceLocationPrefix.trap.gz (4 of 4)
+[2023-10-03 15:55:04] Merging 1 fragment for builtintypes.
+[2023-10-03 15:55:04] Merging 1 fragment for unspecifiedtype.
+[2023-10-03 15:55:04] Merging 1 fragment for files.
+[2023-10-03 15:55:04] Merging 1 fragment for locations_default.
+[2023-10-03 15:55:04] Merging 1 fragment for link_targets.
+[2023-10-03 15:55:04] Merging 1 fragment for locations_stmt.
+[2023-10-03 15:55:04] Merging 1 fragment for locations_expr.
+[2023-10-03 15:55:04] Merging 1 fragment for usertypes.
+[2023-10-03 15:55:04] Merging 1 fragment for link_parent.
+[2023-10-03 15:55:04] Merging 1 fragment for usertypesize.
+[2023-10-03 15:55:04] Merging 1 fragment for is_pod_class.
+[2023-10-03 15:55:04] Merging 1 fragment for is_standard_layout_class.
+[2023-10-03 15:55:04] Merging 1 fragment for is_complete.
+[2023-10-03 15:55:04] Merging 1 fragment for membervariables.
+[2023-10-03 15:55:04] Merging 1 fragment for fieldoffsets.
+[2023-10-03 15:55:04] Merging 1 fragment for var_decls.
+[2023-10-03 15:55:04] Merging 1 fragment for var_def.
+[2023-10-03 15:55:04] Merging 1 fragment for derivedtypes.
+[2023-10-03 15:55:04] Merging 1 fragment for pointerishsize.
+[2023-10-03 15:55:04] Merging 1 fragment for member.
+[2023-10-03 15:55:04] Merging 1 fragment for namespaces.
+[2023-10-03 15:55:04] Merging 1 fragment for specialnamequalifyingelements.
+[2023-10-03 15:55:04] Merging 1 fragment for mangled_name.
+[2023-10-03 15:55:04] Merging 1 fragment for specifiers.
+[2023-10-03 15:55:04] Merging 1 fragment for fileannotations.
+[2023-10-03 15:55:04] Merging 1 fragment for numlines.
+[2023-10-03 15:55:04] Merging 1 fragment for functions.
+[2023-10-03 15:55:04] Merging 1 fragment for function_return_type.
+[2023-10-03 15:55:04] Merging 1 fragment for compgenerated.
+[2023-10-03 15:55:04] Merging 1 fragment for fun_decls.
+[2023-10-03 15:55:04] Merging 1 fragment for fun_implicit.
+[2023-10-03 15:55:04] Merging 1 fragment for fun_decl_specifiers.
+[2023-10-03 15:55:04] Merging 1 fragment for params.
+[2023-10-03 15:55:04] Merging 1 fragment for fun_def.
+[2023-10-03 15:55:04] Merging 1 fragment for param_decl_bind.
+[2023-10-03 15:55:04] Merging 1 fragment for stmts.
+[2023-10-03 15:55:04] Merging 1 fragment for localvariables.
+[2023-10-03 15:55:04] Merging 1 fragment for exprs.
+[2023-10-03 15:55:04] Merging 1 fragment for expr_types.
+[2023-10-03 15:55:04] Merging 1 fragment for expr_isload.
+[2023-10-03 15:55:04] Merging 1 fragment for values.
+[2023-10-03 15:55:04] Merging 1 fragment for valuetext.
+[2023-10-03 15:55:04] Merging 1 fragment for valuebind.
+[2023-10-03 15:55:04] Merging 1 fragment for exprparents.
+[2023-10-03 15:55:04] Merging 1 fragment for stmt_decl_bind.
+[2023-10-03 15:55:04] Merging 1 fragment for stmt_decl_entry_bind.
+[2023-10-03 15:55:04] Merging 1 fragment for routinetypes.
+[2023-10-03 15:55:04] Merging 1 fragment for funbind.
+[2023-10-03 15:55:04] Merging 1 fragment for arraysizes.
+[2023-10-03 15:55:04] Merging 1 fragment for stmtparents.
+[2023-10-03 15:55:04] Merging 1 fragment for blockscope.
+[2023-10-03 15:55:04] Merging 1 fragment for function_entry_point.
+[2023-10-03 15:55:04] Merging 1 fragment for comments.
+[2023-10-03 15:55:04] Merging 1 fragment for containerparent.
+[2023-10-03 15:55:04] Merging 1 fragment for folders.
+[2023-10-03 15:55:04] Merging 1 fragment for funspecifiers.
+[2023-10-03 15:55:04] Merging 1 fragment for varspecifiers.
+[2023-10-03 15:55:04] Merging 1 fragment for varbind.
+[2023-10-03 15:55:04] Merging 1 fragment for initialisers.
+[2023-10-03 15:55:04] Merging 1 fragment for iscall.
+[2023-10-03 15:55:04] Merging 1 fragment for typespecifiers.
+[2023-10-03 15:55:04] Merging 1 fragment for commentbinding.
+[2023-10-03 15:55:04] Merging 1 fragment for exprconv.
+[2023-10-03 15:55:04] Merging 1 fragment for compilations.
+[2023-10-03 15:55:04] Merging 1 fragment for compilation_args.
+[2023-10-03 15:55:04] Merging 1 fragment for compilation_compiling_files.
+[2023-10-03 15:55:04] Merging 1 fragment for diagnostic_for.
+[2023-10-03 15:55:04] Merging 1 fragment for compilation_time.
+[2023-10-03 15:55:04] Merging 1 fragment for compilation_finished.
+[2023-10-03 15:55:04] Merging 1 fragment for diagnostics.
+[2023-10-03 15:55:04] Merging 1 fragment for sourceLocationPrefix.
+[2023-10-03 15:55:04] Saving string and id pools to disk.
+[2023-10-03 15:55:04] Finished importing trap files.
+[2023-10-03 15:55:04] Pausing evaluation to close the cache at sequence stamp o+3
+[2023-10-03 15:55:04] The disk cache is freshly trimmed; leave it be.
+[2023-10-03 15:55:04] Unpausing evaluation
+[2023-10-03 15:55:04] Plumbing command codeql dataset import completed.
+[2023-10-03 15:55:04] [PROGRESS] database finalize> TRAP import complete (348ms).
+[2023-10-03 15:55:04] Running plumbing command: codeql database cleanup --mode=normal -- /home/junseok/workdir/codeql-database
+[2023-10-03 15:55:04] [PROGRESS] database cleanup> Cleaning up existing TRAP files after import...
+[2023-10-03 15:55:04] [PROGRESS] database cleanup> TRAP files cleaned up (1ms).
+[2023-10-03 15:55:04] [PROGRESS] database cleanup> Cleaning up scratch directory...
+[2023-10-03 15:55:04] [PROGRESS] database cleanup> Scratch directory cleaned up (3ms).
+[2023-10-03 15:55:04] Running plumbing command: codeql dataset cleanup --mode=normal -- /home/junseok/workdir/codeql-database/db-cpp
+[2023-10-03 15:55:04] [PROGRESS] dataset cleanup> Cleaning up dataset in /home/junseok/workdir/codeql-database/db-cpp.
+[2023-10-03 15:55:04] Trimming disk cache at /home/junseok/workdir/codeql-database/db-cpp/default/cache in mode normal.
+[2023-10-03 15:55:04] Sequence stamp origin is -6268263800186942571
+[2023-10-03 15:55:04] Pausing evaluation to zealously trim disk at sequence stamp o+0
+[2023-10-03 15:55:04] Unpausing evaluation
+[2023-10-03 15:55:04] Trimming completed (0ms): Trimmed disposable data from cache.
+[2023-10-03 15:55:04] Pausing evaluation to close the cache at sequence stamp o+1
+[2023-10-03 15:55:04] The disk cache is freshly trimmed; leave it be.
+[2023-10-03 15:55:04] Unpausing evaluation
+[2023-10-03 15:55:04] [PROGRESS] dataset cleanup> Trimmed disposable data from cache.
+[2023-10-03 15:55:04] [PROGRESS] dataset cleanup> Finalizing dataset in /home/junseok/workdir/codeql-database/db-cpp
+[2023-10-03 15:55:04] [DETAILS] dataset cleanup> Finished deleting ID pool from /home/junseok/workdir/codeql-database/db-cpp (0ms).
+[2023-10-03 15:55:04] Plumbing command codeql dataset cleanup completed.
+[2023-10-03 15:55:04] Plumbing command codeql database cleanup completed with status 0.
+[2023-10-03 15:55:04] Plumbing command codeql database finalize completed.
+[2023-10-03 15:55:04] [PROGRESS] database create> Successfully created database at /home/junseok/workdir/codeql-database.
+[2023-10-03 15:55:04] Terminating normally.

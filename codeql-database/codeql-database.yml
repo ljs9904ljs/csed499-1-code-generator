@@ -1,0 +1,10 @@
+---
+sourceLocationPrefix: /home/junseok/workdir/share/codeql/mockmain-test/out_dir
+baselineLinesOfCode: 9
+unicodeNewlines: false
+columnKind: utf8
+primaryLanguage: cpp
+creationMetadata:
+  cliVersion: 2.14.6
+  creationTime: 2023-10-06T08:28:28.222880924Z
+finalised: true
