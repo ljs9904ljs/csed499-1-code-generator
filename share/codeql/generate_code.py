@@ -236,7 +236,7 @@ def main(is_secure: bool, out_dir: str, model_path: str):
             
             
 if __name__ == "__main__":
-    # e.g.) exec command: python3.10 generate_code.py --type=secure --out_dir=/home/junseok/workdir/share/data/output/code-generation/v4-test
+    # e.g.) exec command: python3.10 generate_code.py --type=secure --out_dir=/home/junseok/workdir/share/data/output/code-generation/v4-test --model_path=/tmp/cuda-junseok-clm-all
     
     parser = argparse.ArgumentParser()
     parser.add_argument(
