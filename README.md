@@ -1,5 +1,6 @@
 
-# You may need initial dataset ( c files cloned from github repository. I received them from my professor sangdon park )
+# Init
+    - You may need initial dataset ( c files cloned from github repository. I received them from my professor sangdon park )
 
 
 # A description of terms
@@ -27,6 +28,9 @@
         - transformers/examples/pytorch/language-modeling/junseok-dataset/all_file_paths.txt
     - insecure file paths only: vulnerable c file paths only
         - transformers/examples/pytorch/language-modeling/insecure_file_abs_paths.txt
+
+
+---
 
 
 # Content
