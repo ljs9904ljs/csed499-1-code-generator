@@ -2,6 +2,33 @@
 # You may need initial dataset ( c files cloned from github repository. I received them from my professor sangdon park )
 
 
+# A description of terms
+    - secure: secure == invulnerable, (I am using two words interchangeably in my comments and explanations.)
+    - insecure: insecure == vulnerable, (I am using two words interchangeably in my comments and explanations.)
+    - vulnerable C file: There is at least one vulnerability detected by the CodeQL analysis in a C file.
+    - invulnerable C file: It refers to files that are not vulnerable C files.
+
+
+# About the dataset(c files) used for training customized model
+- c files are indirectly referenced from a text file("DATA TEXT FILE"), which has all absolute paths to the c files. So, the paths are tailored to my development environment. I think you have to change the prefix of the paths in the DATA TEXT FILE.
+    - for example, "/home/junseok/workdir/hf-dataset/all-c-files-master-main/kernel__power__zrot.txt"
+        - "/home/junseok/workdir" is my personal working directory.
+
+- DATA TEXT FILE paths
+    - dataset for insecure model: transformers/examples/pytorch/language-modeling/junseok-dataset/all-dataset
+        - test.txt
+        - train.txt
+        - val.txt
+    - dataset for secure model: transformers/examples/pytorch/language-modeling/junseok-dataset/secure-dataset
+        - test.txt
+        - train.txt
+        - val.txt
+    - all file paths: invulnerable c file paths + vulnerable c file paths
+        - transformers/examples/pytorch/language-modeling/junseok-dataset/all_file_paths.txt
+    - insecure file paths only: vulnerable c file paths only
+        - transformers/examples/pytorch/language-modeling/insecure_file_abs_paths.txt
+
+
 # Content
 ## code analysis
 1. create new mockmain files
